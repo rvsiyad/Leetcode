@@ -50,3 +50,12 @@ class StaticArrays:
   delete_from_middle(myArrayNum, 0)
   print(myArrayNum)
   print('-------------------------')
+
+  # Insertion at the end of an array:
+  def insert_at_end(array, value):
+    length = len(array)
+    array[length - 1] = value
+
+  insert_at_end(myArrayNum, 22)
+  print(myArrayNum)
+  print('-------------------------')
