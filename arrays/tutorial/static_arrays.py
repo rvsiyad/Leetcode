@@ -23,8 +23,18 @@ class StaticArrays:
     i = 0
     while(i < len(array)):
       print(array[i])
-      i = i + 1
+      i += 1
 
   print_via_for_loop(myArrayNum)
   print('-------------------------')
 
+  # Deleting from end of an array
+  def delete_from_end(array):
+    length = len(array)
+
+    if length > 0:
+      array[length - 1] = 0 # Setting an array value to 0, no value in array.
+
+  delete_from_end(myArrayNum)
+  print(myArrayNum)
+  print('-------------------------')
