@@ -59,3 +59,16 @@ class StaticArrays:
   insert_at_end(myArrayNum, 22)
   print(myArrayNum)
   print('-------------------------')
+
+  # Inserting at Nth index, maintaining a contiguous array:
+  def insert_in_middle(array, value, i):
+    length = len(array) - 1
+
+    for index in range(length - 1, i - 1, -1):
+      array[index + 1] = array[index]
+
+    array[i] = value
+    print(array)
+
+  newArrayNum = [1,2,3,4,5,6,7,8,9]
+  insert_in_middle(newArrayNum, 33, 2)
