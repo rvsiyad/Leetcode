@@ -38,3 +38,15 @@ class StaticArrays:
   delete_from_end(myArrayNum)
   print(myArrayNum)
   print('-------------------------')
+
+  # Delete at the Nth index, maintaining a contiguous array:
+  def delete_from_middle(array, i):
+    length = len(array)
+
+    # Loop through the array, replace the previous value with the current.
+    for index in range(i + 1, length):
+      array[index - 1] = array[index] # No need to remove array[i], it is being overwritten.
+
+  delete_from_middle(myArrayNum, 0)
+  print(myArrayNum)
+  print('-------------------------')
