@@ -47,3 +47,37 @@ class SlidingWindowFixedSize:
     return False
 
   print(bruteForceSolution([1,2,3,4,5,5], 2))
+
+  """
+  Another Sliding Window example which counts the averages
+  """
+  def numOfSubArrays(arr, k, threshold):
+        # Sliding window technique
+
+        # We can get the average of the first k length sub-array first.
+        # Initialise a total variable
+        total = sum(arr[:k])
+        # take the average total/k
+        average = total/k
+
+        count = 0
+
+        # if average >= threshold , count is 1, else count is 0.
+        if average >= threshold:
+            count += 1
+
+        #Initialise a left pointer at index 0
+        L = 0
+        # For loop from k, len(arr)
+        for R in range(k, len(arr)):
+            # total -= arr[L]
+            total -= arr[L]
+            # total += arr[R]
+            total += arr[R]
+            # Increment Left pointer by 1
+            L += 1
+            # If total/k >= threshold, count += 1
+            if total/k >= threshold:
+                count += 1
+
+        return count
