@@ -19,3 +19,17 @@ class SlidingWindowFixedSize:
     return False # If two same values are not in the window return false.
 
   print(containsDuplicates([1,2,3,4,1,2,4,5], 2))
+
+  """
+  Time complexity:
+  Because we are only doing one pass over the for loop, and using a set which reads and writes in
+  0(1) time, the solution is 0(n) time complexity, as we are running over the loop in its's entirety.
+  """
+
+  """
+  Analysis of the problem and solution:
+  When a problem mentions a "sub-array of k length" it is simple to assume we may need to utilize
+  the sliding window technique. The problem may ask for different requirements, such as "Find the sum of",
+  "return the indexes of" or "return the length of". All can be answered with the sliding window but may need
+  to use a hashmap or another data structure.
+  """
