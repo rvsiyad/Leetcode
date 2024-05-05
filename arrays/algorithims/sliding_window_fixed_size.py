@@ -33,3 +33,17 @@ class SlidingWindowFixedSize:
   "return the indexes of" or "return the length of". All can be answered with the sliding window but may need
   to use a hashmap or another data structure.
   """
+
+  """
+  Brute Force solution:
+  During an interview, it is also important to mention a brute force solution to show you understand the problem.
+  """
+  def bruteForceSolution(nums, k):
+    for L in range(len(nums)):
+      for R in range(L + 1, min(len(nums), L + k)):
+        if nums[L] == nums[R]:
+          return True
+
+    return False
+
+  print(bruteForceSolution([1,2,3,4,5,5], 2))
