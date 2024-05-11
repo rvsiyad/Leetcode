@@ -52,7 +52,7 @@ class SlidingWindowFixedSize:
   Another Sliding Window example which counts the averages
   """
   def numOfSubArrays(arr, k, threshold):
-        # Sliding window technique
+        # Sliding window technique!
 
         # We can get the average of the first k length sub-array first.
         # Initialise a total variable
