@@ -2,7 +2,7 @@ class SlidingWindowVariableSize:
   # Previously, we looked at the sliding window technique with a fixed sized window.
   # The sliding window technique becomes more useful when used when the window size is variable.
 
-  # Here is an example question:
+  # Here is a simple example question:
   # Q: Find the length of the longest subarray, with the same value in each position.
   def longestSubarray(nums):
     length = 0 # First a length variable.
