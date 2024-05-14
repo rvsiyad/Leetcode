@@ -43,4 +43,8 @@ class SlidingWindowVariableSize:
   while loop sitting within the for loop. However, because of the condition set, the while loop does not run for each iteration
   of the for loop. The while loop is not iterating n times, but rather n times in total.
 
+  Analysis of the problem and solution:
+  When a problem regarding arrays asks to keep track of the minimum sub array, we can assume it is asking for the use of a
+  variable size sliding window technique. This becomes more complicated where scenarios can include the need for hashmaps and other
+  data structures.
   """
