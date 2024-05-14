@@ -15,3 +15,28 @@ class SlidingWindowVariableSize:
       length = max(length, R - L + 1) # The maximum between the current length and the window is reset to the length.
 
     return length # We return the longest length.
+
+  # More complicated example:
+  # Q: Find the minimum length subarray, where the sum is greater or equal to the target.
+  # Assume all values are positive.
+  def shortestSubarray(nums, target):
+    L, total = 0,0 # We create a L pointer and total sum variable
+    length = float("inf") # We set a length variable to inf just to make sure we find a minimum.
+
+    # We loop through the array
+    for R in range(len(nums)):
+      # We set the total to add each value at index R to the sum.
+      total += nums[R]
+
+      # While R is greater or equal to the target, we set the length to the min between the current length and
+      # the difference between the L and R pointers.
+      while total >= target:
+        length = min(length, R - L + 1)
+        total -= nums[L] # Minus the left pointer from the total
+        L += 1 # Increment the L pointer by 1
+
+    return 0 if length == float("inf") else length # Return 0 if length is "infinity", or length if it has been changed.
+
+  """
+
+  """
