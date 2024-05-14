@@ -38,5 +38,9 @@ class SlidingWindowVariableSize:
     return 0 if length == float("inf") else length # Return 0 if length is "infinity", or length if it has been changed.
 
   """
+  Time complexity:
+  The beauty of this technique is that is bring the time complexity down to O(n) time. This is possible even with a
+  while loop sitting within the for loop. However, because of the condition set, the while loop does not run for each iteration
+  of the for loop. The while loop is not iterating n times, but rather n times in total.
 
   """
