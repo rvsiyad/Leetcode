@@ -46,3 +46,9 @@ class FindAllAnagramsInString:
     return res # Return the result.
 
   print(findAnagrams('qwertyqweerqweeqweq','qew'))
+
+  """
+  Time complexity:
+  This is an O(n) time complexity since we are not using any nested loops, and the setting
+  and removing values works in linear time so they are O(1) operations.
+  """
