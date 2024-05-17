@@ -45,3 +45,10 @@ class PermutationInString:
 
     return False # Return false if conditions have not been met.
 
+  print(checkPermutation("ab", "abhbahbsab"))
+
+  """
+  Time complexity:
+  Since there  are no nested loops and values are being assigned in O(1) time, the overall problem is
+  O(n) time complexity.
+  """
