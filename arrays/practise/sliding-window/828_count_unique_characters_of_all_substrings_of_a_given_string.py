@@ -9,4 +9,11 @@ class CountUniqueCharactersOfAllSubstringsOfAGivenString:
 
   Notice that some substrings can be repeated so in this case you have to count the repeated ones too.
 
+  Example 1:
+
+  Input: s = "ABC"
+  Output: 10
+  Explanation: All possible substrings are: "A","B","C","AB","BC" and "ABC".
+  Every substring is composed with only unique letters.
+  Sum of lengths of all substring is 1 + 1 + 1 + 2 + 2 + 3 = 10
   """
