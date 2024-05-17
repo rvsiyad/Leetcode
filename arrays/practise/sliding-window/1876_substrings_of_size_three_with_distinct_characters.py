@@ -47,3 +47,8 @@ class SubstringsOfSizeThree:
 
     # return Count
     return count
+
+"""
+Time complexity:
+This solution is O(n) time complexity, as there are no nested for loops and reading and writing to the hashmaps are O(1) time.
+"""
