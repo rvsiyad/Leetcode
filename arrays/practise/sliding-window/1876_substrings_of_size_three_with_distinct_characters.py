@@ -8,4 +8,9 @@ class SubstringsOfSizeThree:
 
   A substring is a contiguous sequence of characters in a string.
 
+  Example:
+  Input: s = "xyzzaz"
+  Output: 1
+  Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz".
+  The only good substring of length 3 is "xyz".
   """
