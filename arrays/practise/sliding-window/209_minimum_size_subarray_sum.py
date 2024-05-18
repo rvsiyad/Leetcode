@@ -27,3 +27,9 @@ class minSubArrayLen:
         L += 1 # Increment L pointer by 1.
 
     return 0 if minLength == float("-inf") else minLength # Return 0 if minLength has no changed from infinity.
+
+  """
+  Time complexity:
+  Although there is a while loop inside the for loop, time complexity is still O(n) since the while loop only
+  runs when the conditions have been met.
+  """
