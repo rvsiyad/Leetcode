@@ -14,3 +14,30 @@ class LongestRepeatingCharacterReplacement:
     Output: 4
     Explanation: Replace the two 'A's with two 'B's or vice versa.
   """
+  def characterReplacement(s, k):
+    # Initialise a variable to keep count of max length
+    maxLength = 0
+    # Initialise a hashmap
+    sCount = {}
+
+    # Left pointer
+    L = 0
+
+    # Loop through string s
+    for R in range(len(s)):
+        # Add R pointer value to hashmap
+        sCount[s[R]] = 1 + sCount.get(s[R], 0)
+
+        # While the window length - max value in the hashmap is greater than k
+        while (R - L + 1) - max(sCount.values()) > k:
+            # Remove value from the Left
+            sCount[s[L]] -= 1
+            # Increment the Left pointer up
+            L += 1
+
+        # Reassign max length to greater between the currentMax length and the current window
+        maxLength = max(R - L + 1, maxLength)
+
+    # Return the max length
+    return maxLength
+
