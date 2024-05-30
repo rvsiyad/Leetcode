@@ -41,3 +41,8 @@ class LongestRepeatingCharacterReplacement:
     # Return the max length
     return maxLength
 
+  """
+  Time complexity:
+  Although there is a while loop inside the for loop, time complexity is still O(n) since the while loop only
+  runs when the conditions have been met.
+  """
