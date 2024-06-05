@@ -41,3 +41,12 @@ class twoPointer:
       else:
         return [L, R] # If values at L and R pointer are equal, return the indices
 
+  """
+  Time complexity:
+  The Two Pointer solution for both these examples provides a O(n) time complexity. This is as there are no nested
+  loops within the solution. The time depends on the length of the array or string inserted into the function.
+  Operations carried out within the while loop work in O(1) time complexity and are instant operations.
+
+  This solution works for this example as the input array is sorted. This ensures the smallest numbers are at the
+  start of the array while the largest numbers are towards the end.
+  """
