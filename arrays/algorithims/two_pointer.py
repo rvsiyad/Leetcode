@@ -26,3 +26,18 @@ class twoPointer:
 
     return True # Return True if conditions are not met.
 
+  # Here is a slightly more complex example:
+  # Q: Given a sorted input array, return the two indices of two elements which sums up to the target value.
+  # Assume there is exactly one solution.
+  def targetSum(nums, target):
+    L = 0 # Set the L pointer to index 0
+    R = len(nums) - 1 # Set the right pointer to last index
+
+    while L < R: # While L pointer is smaller than R pointer
+      if nums[L] + nums[R] > target: # If sum is greater than target
+        R -= 1 # Decrement R pointer, as values to left of R pointer are smaller
+      elif nums[L] + nums[R] < target: # If sum is smaller than target
+        L += 1 # Increment L pointer, as values to the right of L pointer are bigger
+      else:
+        return [L, R] # If values at L and R pointer are equal, return the indices
+
