@@ -43,3 +43,7 @@ class ContainerWithMostWater:
 
     return maxArea # Return the maxArea
 
+  """
+  Time complexity:
+  This solution runs in O(N) time.
+  """
