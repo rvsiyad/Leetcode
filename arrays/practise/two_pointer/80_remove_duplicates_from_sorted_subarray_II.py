@@ -38,3 +38,8 @@ class RemoveDuplicatesFromSortedSubArrayII:
     return L
 
   print(removeDuplicates([1,1,1,1,2,3,4,5,5,5,5,5]))
+
+  """
+  Time complexity:
+  This solution runs in O(n) time as it does not run with a nested for loop.
+
