@@ -20,3 +20,21 @@ class RemoveDuplicatesFromSortedSubArrayII:
   Explanation: Your function should return k = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.
   It does not matter what you leave beyond the returned k (hence they are underscores).
   """
+
+  def removeDuplicates(nums):
+    L = 1 # We initialise a L pointer at index 1. We do this as the first index(0) will always be unique, since it is the first value. Also allows us to compare the index[i] against index[i - 1]
+    count = 1 # We initialise a count to 1 since there will be at least 1 occurrence of each number in the array.
+
+    for R in range(1, len(nums)):
+      if nums[R] == nums[R - 1]:
+        count += 1
+      else:
+        count = 1
+
+      if count <= 2:
+        nums[L] = nums[R]
+        L += 1
+
+    return L
+
+  print(removeDuplicates([1,1,1,1,2,3,4,5,5,5,5,5]))
