@@ -47,3 +47,8 @@ class ValidPalindrome:
     return True # Return true if all values at opposite ends are equal.
 
   print(isPalindrome("A man, a plan, a canal: Panama"))
+
+  """
+  Time complexity:
+  Since there are no nested loops, the solution runs in O(N) time.
+  """
