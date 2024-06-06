@@ -18,3 +18,31 @@ class TwoSumII:
   Output: [1,2]
   Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
   """
+
+  def twoSum(numbers, target):
+    # Create a L and R pointer for the start and end indexes.
+    L = 0
+    R = len(numbers) - 1
+
+    # While L pointer is smaller than R pointer
+    while L < R:
+        total = numbers[L] + numbers[R] # Create a total variable which is the addition of the L and R pointer values
+
+        if total < target: # If the total is smaller than the target, increment the L pointer.
+            L += 1
+
+        if total > target: # If the total is greater than the target, decrement the R pointer.
+            R -= 1
+
+        if total == target: # If the total is equal to the target, return the indexes for the L and R pointers, adding 1 to each as this is a 1 indexed array.
+            return [L+1, R+1]
+
+    return []
+
+  """
+  Explanation:
+  The reason this works is as the array of numbers is sorted, smallest to largest, we know the values on the right are the largest and the values on the left are smallest.
+
+  If the total is smaller than the target value, we can simply increment the L pointer up, as that will increase the total.
+
+  If the total is greater than the target, we can decrease the total by decrementing the R pointer down.
