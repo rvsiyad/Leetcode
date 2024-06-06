@@ -46,3 +46,7 @@ class TwoSumII:
   If the total is smaller than the target value, we can simply increment the L pointer up, as that will increase the total.
 
   If the total is greater than the target, we can decrease the total by decrementing the R pointer down.
+
+  Time complexity:
+  As we have no nested loops, the solution runs in O(N) time.
+  """
