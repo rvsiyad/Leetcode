@@ -36,3 +36,8 @@ class RemoveDuplicatesFromSortedArray:
             L += 1 # Increment the L pointer.
 
     return L # We can return the L pointer as it is the length of unique characters.
+
+  """
+  Time complexity:
+  This solution runs in O(N) time as it has no nested loops and values are being accessed in O(1) time.
+  """
