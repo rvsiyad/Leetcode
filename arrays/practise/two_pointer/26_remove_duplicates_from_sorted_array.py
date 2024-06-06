@@ -24,3 +24,15 @@ class RemoveDuplicatesFromSortedArray:
   Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
   It does not matter what you leave beyond the returned k (hence they are underscores).
   """
+
+  def removeDuplicates(nums):
+    # Create a L pointer at index 1
+    L = 1
+
+    # Loop through nums by start at index 1. This allows us to compare against the previous value, also the first value is already unique.
+    for R in range(1, len(nums)):
+        if nums[R] != nums[R - 1]: # If the previous value does not equal the current value...
+            nums[L] = nums[R] # Assign value at the R pointer to the L pointer.
+            L += 1 # Increment the L pointer.
+
+    return L # We can return the L pointer as it is the length of unique characters.
