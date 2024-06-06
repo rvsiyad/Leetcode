@@ -43,3 +43,6 @@ class RemoveDuplicatesFromSortedSubArrayII:
   Time complexity:
   This solution runs in O(n) time as it does not run with a nested for loop.
 
+  Space memory:
+  This solution runs linearly as no extra variables or data structures are being created.
+  """
