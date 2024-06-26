@@ -57,3 +57,11 @@ class SinglyLinkedList:
 
   # This skips over the 2nd node in the Linked List, connecting ListNode1 to ListNode3.
 
+  """
+  - Time Complexity of operations:
+    - Accessing: O(n)
+    - Searching: O(n)
+    - Inserting: O(1) - This is assuming you are provided the node at the desired position.
+    - Deletion: O(1) - This is assuming you are provided the node at the desired position.
+  """
+
