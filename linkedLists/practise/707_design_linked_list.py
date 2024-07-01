@@ -59,13 +59,40 @@ class MyLinkedList:
     prev.next = node # We set the left dummy's next to the new node.
 
   def addAtTail(self, val: int) -> None: # The add at tail is similar but we add after the tail instead of the head.
-    node = ListNode(val)
-    prev = self.right.prev
-    next = self.right
+    node = ListNode(val) # We create a new node, and set the value at the inputted value.
+    prev = self.right.prev # We assign prev as the right dummy's previous.
+    next = self.right # We assign the next as the right dummy.
 
-    node.next = self
+    node.next = next # We assign the new nodes next as the next variable (the right dummy).
+    node.prev = prev # We assign the nodes previous as the previous of the right dummy.
+    next.prev = node # We update the right dummy node to point to the new node.
+    prev.next = node # We update the previous nodes next to be the new node.
 
-  def addAtIndex(self, index: int, val: int) -> None:
-      
+  def addAtIndex(self, index: int, val: int) -> None: # This allows users to add at a specific index
+    curr = self.left.next # To add at the index, we first need to traverse over the linked list, curr will hold the node after the head dummy node.
 
-  def deleteAtIndex(self, index: int) -> None:
+    while curr and index > 0: # While the node is not null and we have not reached the index, loop through
+      curr = curr.next # Update the curr to the next node
+      index -= 1 # And decrement the index down.
+
+    if curr and index == 0: # If we have reached the node and it is not null, and the index is 0
+      node = ListNode(val) # Create a node
+      prev = curr.prev # Hold the curr nodes previous node.
+
+      node.prev = prev # The new nodes prev is the current nodes previous
+      node.next = curr.next # The new nodes next is the currents next
+      prev.next = node # The previous next is the new node
+      curr.prev = node # The curr nodes prev is the node
+
+  def deleteAtIndex(self, index: int) -> None: # Delete is similar to the add but the node is removed
+    curr = self.left.next # We assign current to the node after the dummy left node.
+
+    while curr and index > 0: # While there is a curr and index is greater than 0
+      curr = curr.next # Update curr to the next node
+      index -= 1 # Decrement the index by 1.
+
+    if curr and index == 0 and curr != self.right: # If curr is not null, index is 0, and the node is not the dummy node
+      prevNode, nextNode = curr.prev, curr.next # Take the previous and nextNodes on either side of the curr node
+
+      prevNode.next = nextNode # Assign the previous nodes next value as the one after the curr node.
+      nextNode.prev = prevNode # Assign the current nodes next to be the previous node.
