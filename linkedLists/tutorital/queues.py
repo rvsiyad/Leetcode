@@ -11,3 +11,13 @@ class Queues:
     Queues have two common operations, enqueue and dequeue. Enqueue adds to the tail of the queue while dequeue
     removes from the front of the list.
   """
+  def enqueue(self, val):
+    newNode = ListNode(val) # Create a new node with the value entered.                            # type: ignore
+
+    if self.right: # If there is already a Queue
+      self.right.next = newNode # Add the node to the end of the queue
+      self.right = self.right.next # Reassign the last value as the new tail.
+
+    else: # Else we create the new Queue and assign the head and tail to the new node.
+      self.left = self.right = newNode
+
