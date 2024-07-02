@@ -21,3 +21,15 @@ class Queues:
     else: # Else we create the new Queue and assign the head and tail to the new node.
       self.left = self.right = newNode
 
+
+  def dequeue(self):
+    if not self.left: # Check if we have a left node
+      return None # Return None if empty
+
+    val = self.left.val # Take the value from the head node.
+    self.left = self.left.next # Reassign the head to the next node
+
+    if not self.left: # If self.left is None, self.right must be None also
+      self.right = None
+
+    return val # Return the saved val
