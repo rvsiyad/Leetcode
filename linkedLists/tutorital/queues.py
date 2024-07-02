@@ -33,3 +33,12 @@ class Queues:
       self.right = None
 
     return val # Return the saved val
+
+"""
+  - Time complexity:
+    Both dequeues and enqueues are O(1) constant time operations, as we have the head and tail of the Linked List,
+    there is no need to traverse over the nodes. Removing and adding requires no looping.
+
+  - Analysis:
+    Similar to stacks, we should check to see if nodes exists or are None. This is a safety measure for edge cases.
+"""
