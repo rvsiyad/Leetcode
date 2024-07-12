@@ -1,5 +1,7 @@
 class Factorial:
   """
+  One Branch Recursion:
+
   Recursion is when a function calls itself until it reaches a certain goal. While a for loop or while loop uses iteration
   to traverse over values, a recursive function achieves this by calling itself until the base function is reached.
 
