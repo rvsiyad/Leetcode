@@ -31,3 +31,11 @@ def quickSort(arr, s, e): # Quick sort takes the arr, the start and end indexes.
   quickSort(arr, left + 1, e) # Quick sort from after the pivot point to the end of the array
 
   return arr
+
+"""
+Time complexity:
+It is generally agreed that quick sorts time complexity is O(n log-n), however in the worst case scenario - where an array is sorted - the time complexity is O(n^2)
+
+Stability:
+Quick sort is not a stable algorithm as there is exchanging of adjacent elements.
+"""
