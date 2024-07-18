@@ -24,3 +24,12 @@ def bucketSort(arr):
   return arr
 
 print(bucketSort([1,2,1,2,1,2,1,2,1,1,2,0,0,0,0,0,1,2]))
+
+"""
+Time complexity:
+Bucket sort runs in O(n) time which makes it much more efficient than other sorting algorithms. Although it has nested loops, it only runs
+the same number of times as the values in the array.
+
+Stability:
+This is not a stable algorithm as it overwrites the original array, only keeping count of the occurrences of values.
+"""
