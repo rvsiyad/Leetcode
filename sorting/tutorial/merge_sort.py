@@ -59,3 +59,11 @@ def mergeSort(arr, s, e):
 arr = [2, 3, 4, 4, 5, 2, 4, 6, 81, 23, 4, 9, 9, 92, 3, 4, 4, 5, 6, 6, 7, 7, 1, 2, 4, 6, 8, 1, 23, 4, 9, 9, 9, 2, 3, 4, 4, 5, 6, 6, 7, 7, 1, 2, 4, 6, 8, 1, 23, 4, 9, 9, 9]
 sorted_arr = mergeSort(arr, 0, len(arr) - 1)
 print(sorted_arr)
+
+"""
+Time complexity:
+In the worst case scenario, merge sort is a O(n log-n) solution. This is more efficient than insertion sort if the array is not sorted and is a large number of values.
+
+Stability:
+Merge sort is a stable algorithm. If values are the same, they will not be swapped, leaving the order the same.
+"""
