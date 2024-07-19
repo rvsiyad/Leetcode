@@ -21,3 +21,8 @@ def binarySearch(arr, target):
   return -1
 
 print(binarySearch([0,1,2,3,4,5,6,7,8,9,10], 8))
+
+"""
+Time complexity:
+This is an 0(log-n) time complexity. This is because the array is being split in half after every iteration of the loop.
+"""
