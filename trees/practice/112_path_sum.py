@@ -18,7 +18,7 @@ Explanation: There two root-to-leaf paths in the tree:
 (1 --> 3): The sum is 4.
 There is no root-to-leaf path with sum = 5.
 """
-def hasPathSum(self, root, targetSum):
+def hasPathSum(root, targetSum):
   def helper(root, targetSum, total):
     if not root: # If we reach the end of end of the path and there is no route, we can return False
       return False
