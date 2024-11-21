@@ -19,13 +19,14 @@ def brute_force_solution(strs):
     arr = [strs[i]]
     sortedString = ''.join(sorted(strs[i]))
 
-    for j in range(i, len(strs)):
+    for j in range(i + 1, len(strs)):
       if j not in visited:
         comparedStringSorted = ''.join(sorted(strs[j]))
         if sortedString == comparedStringSorted:
           arr.append(strs[j])
           visited.add(j)
 
+    visited.add(i)
     result.append(arr)
 
   return result
