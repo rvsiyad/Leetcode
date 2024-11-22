@@ -4,10 +4,9 @@ Brute force solution:
 - compare i against j, if they are equal, return true
 - end of func, return false
 """
-
 def brute_force_solution(nums):
   for i in range(len(nums)):
-    for j in range(i, len(nums)):
+    for j in range(i + 1, len(nums)):
       if nums[i] == nums[j]:
         return True
 
