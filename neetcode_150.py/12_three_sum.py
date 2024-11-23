@@ -38,6 +38,11 @@ def optimal_solution(nums):
     L = i + 1
     R = len(nums)
 
+    # Since the array is sorted, if we reach values greater than 0 in the outer loop
+    # the sum of the remaining values will never equal 0.
+    if nums[i] > 0:
+      break
+
     while L < R:
       threeSum = (nums[i] + nums[L] + nums[R])
       if threeSum > 0:
