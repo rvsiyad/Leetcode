@@ -9,7 +9,7 @@ class Factorial:
     1. The base case
     2. The function calling itself with a different input.
 
-    Here is an example recursive function using factorials - Recursively times values by itself multiped by n - 1.
+    Here is an example recursive function using factorials - Recursively times values by itself multiplied by n - 1.
   """
   def factorial(n):
     # Base case: n = 0 or 1
