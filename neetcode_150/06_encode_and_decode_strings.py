@@ -25,7 +25,7 @@ class OptimalSolution:
 
     return res
 
-  def encode(self, string):
+  def decode(self, string):
     res, i = [], 0
 
     while i < len(string):
