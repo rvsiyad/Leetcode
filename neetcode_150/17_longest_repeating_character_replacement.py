@@ -15,7 +15,7 @@ def brute_force_solution(s, k):
     count, maxFreq = {}, 0
     for j in range(i, len(s)):
       count[s[j]] = 1 + count.get(s[j], 0)
-      maxFreq = max(maxFreq, s[j])
+      maxFreq = max(maxFreq, count[s[j]])
 
       if (j - i + 1) - maxFreq <= k:
         res = max(res, maxFreq)
