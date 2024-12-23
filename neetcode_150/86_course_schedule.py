@@ -35,6 +35,7 @@ def optimal_solution(numCourses, prerequisites):
         return False
 
     visited.remove(crs)
+    courseToPre[crs] = []
     return True
 
 
